@@ -7,8 +7,6 @@ module.exports = function getZerosCount(number, base) {
     for (minBase; minBase < base; minBase++) {
       if (base % minBase == 0) {
         base = base / minBase;
-      } else  { 
-        minBase++; 
       }
     }
   }
