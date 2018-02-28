@@ -3,13 +3,13 @@ module.exports = function getZerosCount(number, base) {
   var minBase = 2;
 
   if (base >= minBase && base <= 256) {
-    
-    while (minBase < base) {
 
+    for (minBase; minBase < base; minBase++) {
       if (base % minBase == 0) {
-        base /= minBase;
-      }  
-      minBase++;
+        base = base / minBase;
+      } else  { 
+        minBase++; 
+      }
     }
   }
 
